@@ -1,17 +1,7 @@
-const http = require('http')
+const {writeFileSync} = require('fs')
 
-// const server = http.createServer((req, res)=>{
-    
-//     res.end('Welcome')
-    
-// })
+for (let i = 0; i < 100000; i++) {
+    writeFileSync('./content/big.txt', `hello world ${i}\n`, {flag : 'a'})
+}
 
-//Using Event Emitter API
-const server = http.createServer()
-
-server.on('request', (req,res)=>{
-    res.end('Welcome')
-})
-server.listen(5000, ()=>{
-    console.log('server is listening on port 5000');
-})
+// console.log(('stream example'));
