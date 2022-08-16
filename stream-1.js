@@ -7,8 +7,8 @@
 const {createReadStream} =require('fs')
 
 const stream = createReadStream('./content/big.txt', {
-    highWaterMark:90000, 
-    // encoding: 'utf8'
+    highWaterMark:90000, //sets maximum size for each stream
+    // encoding: 'utf8' //without the encoding the result will buffer
 })
 
 stream.on('data', (result)=>{

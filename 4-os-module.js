@@ -2,7 +2,7 @@ const os = require('os')
 const user = os.userInfo()
 console.log(user);
 
-console.log(os.uptime());
+console.log('this is the uptime in secs', os.uptime());
 
 const currentOs ={
     name : os.type(),

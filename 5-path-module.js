@@ -1,7 +1,7 @@
 const { basename } = require('path');
 const path = require('path')
 
-// path.join(takes arg in sewuence of the location of the basename(the file gan gan))
+// path.join(takes arg in sequence of the location of the basename(the file gan gan))
 
 console.log(path.join('/content', 'sub-folder', 'text.txt'));
 // path.sep
